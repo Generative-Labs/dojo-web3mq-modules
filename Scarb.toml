@@ -1,6 +1,6 @@
 [package]
 cairo-version = "2.2.0"
-name = "dojo_web3mq_group"
+name = "dojo_web3mq_modules"
 version = "0.1.0"
 
 [cairo]

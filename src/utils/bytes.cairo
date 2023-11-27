@@ -5,9 +5,9 @@ use traits::TryInto;
 use traits::DivRem;
 use option::OptionTrait;
 use starknet::{ContractAddress, Felt252TryIntoContractAddress};
-use dojo_web3mq_group::utils::math::{u128_fast_pow2, u128_join, u128_split, u128_sub_value};
-use dojo_web3mq_group::utils::utils::{u128_array_slice, u8_array_to_u256};
-use dojo_web3mq_group::utils::keccak::keccak_u128s_be;
+use dojo_web3mq_modules::utils::math::{u128_fast_pow2, u128_join, u128_split, u128_sub_value};
+use dojo_web3mq_modules::utils::utils::{u128_array_slice, u8_array_to_u256};
+use dojo_web3mq_modules::utils::keccak::keccak_u128s_be;
 // use alexandria_math::sha256::sha256;
 
 const BYTES_PER_ELEMENT: usize = 16;

@@ -858,7 +858,7 @@
     {
       "name": "group_systems",
       "address": null,
-      "class_hash": "0x7f60aa1513543798ea5578564e37171b0e086f3bed512ffa5e3deabdb634a4f",
+      "class_hash": "0x7913f654775b77499f3d0bd94d1b7866813aa8068d1a91dd7355aad56913efc",
       "abi": [
         {
           "type": "impl",
@@ -886,7 +886,7 @@
         {
           "type": "impl",
           "name": "GroupImpl",
-          "interface_name": "dojo_web3mq_group::systems::group::interface::IGroup"
+          "interface_name": "dojo_web3mq_modules::systems::group::interface::IGroup"
         },
         {
           "type": "struct",
@@ -914,7 +914,7 @@
         },
         {
           "type": "interface",
-          "name": "dojo_web3mq_group::systems::group::interface::IGroup",
+          "name": "dojo_web3mq_modules::systems::group::interface::IGroup",
           "items": [
             {
               "type": "function",
@@ -1051,7 +1051,7 @@
         },
         {
           "type": "event",
-          "name": "dojo_web3mq_group::systems::group::contract::group_systems::Event",
+          "name": "dojo_web3mq_modules::systems::group::contract::group_systems::Event",
           "kind": "enum",
           "variants": []
         }
@@ -1078,7 +1078,7 @@
           "key": false
         }
       ],
-      "class_hash": "0x433f036fe7bde8d33fcf66f149d40fedd49dc4c0996615091fd878032873054",
+      "class_hash": "0x1473375f150f0f9e3c7e6b9065a35ae85652facbf3d2c2ec6f32052f91da8ce",
       "abi": [
         {
           "type": "function",
@@ -1235,7 +1235,7 @@
         },
         {
           "type": "event",
-          "name": "dojo_web3mq_group::models::group::Event",
+          "name": "dojo_web3mq_modules::models::group::Event",
           "kind": "enum",
           "variants": []
         }
@@ -1260,7 +1260,7 @@
           "key": false
         }
       ],
-      "class_hash": "0x75b005cfb88c5b29fd87bba18f9c464e2073a9a17b24933af8b4db52b69e886",
+      "class_hash": "0x2bfb231634a80f695b68fa9495e5d21b3204ca8ad6c5a7df9737e7dfb931efb",
       "abi": [
         {
           "type": "function",
@@ -1417,7 +1417,7 @@
         },
         {
           "type": "event",
-          "name": "dojo_web3mq_group::models::member::Event",
+          "name": "dojo_web3mq_modules::models::member::Event",
           "kind": "enum",
           "variants": []
         }

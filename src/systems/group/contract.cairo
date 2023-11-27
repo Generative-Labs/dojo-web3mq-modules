@@ -1,9 +1,9 @@
 #[dojo::contract]
 mod group_systems{
     use starknet::ContractAddress;
-    use dojo_web3mq_group::models::{Group, Member};
-    use dojo_web3mq_group::systems::group::interface::IGroup;
-    use dojo_web3mq_group::utils::bytes::{Bytes, BytesTrait};
+    use dojo_web3mq_modules::models::{Group, Member};
+    use dojo_web3mq_modules::systems::group::interface::IGroup;
+    use dojo_web3mq_modules::utils::bytes::{Bytes, BytesTrait};
     use debug::PrintTrait;
     #[external(v0)]
     impl GroupImpl of IGroup<ContractState>{

@@ -1,4 +1,4 @@
-use dojo_web3mq_group::utils::math::{u128_join};
+use dojo_web3mq_modules::utils::math::{u128_join};
 fn u8_array_to_u256(arr: Span<u8>) -> u256 {
     assert(arr.len() == 32, 'too large');
     let mut i = 0;

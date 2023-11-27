@@ -5,8 +5,8 @@ use option::OptionTrait;
 use traits::DivRem;
 use starknet::SyscallResultTrait;
 use keccak::{u128_to_u64, u128_split as u128_split_to_u64, cairo_keccak};
-use dojo_web3mq_group::utils::math::{uint_min, u128_split, u128_fast_pow2, u128_join};
-use dojo_web3mq_group::utils::utils::u64_array_slice;
+use dojo_web3mq_modules::utils::math::{uint_min, u128_split, u128_fast_pow2, u128_join};
+use dojo_web3mq_modules::utils::utils::u64_array_slice;
 
 const KECCAK_FULL_RATE_IN_U64S: usize = 17;
 

@@ -6,10 +6,10 @@ use starknet::{
     syscalls::deploy_syscall,ClassHash, ContractAddress
 };
 
-use dojo_web3mq_group::systems::group::contract::group_systems;
-use dojo_web3mq_group::models::{group, Group};
-use dojo_web3mq_group::models::{member, Member};
-use dojo_web3mq_group::systems::group::interface::{IGroupDispatcher, IGroupDispatcherTrait};
+use dojo_web3mq_modules::systems::group::contract::group_systems;
+use dojo_web3mq_modules::models::{group, Group};
+use dojo_web3mq_modules::models::{member, Member};
+use dojo_web3mq_modules::systems::group::interface::{IGroupDispatcher, IGroupDispatcherTrait};
 use core::traits::Into;
 use debug::PrintTrait;
 
