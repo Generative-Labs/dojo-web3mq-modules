@@ -4,6 +4,9 @@ name = "dojo_web3mq_modules"
 version = "0.1.0"
 
 [cairo]
+sierra-replace-ids = true
+
+[lib]
 sierra = false  # Enable Sierra codegen.
 casm = false   # Enable CASM codegen.
 
