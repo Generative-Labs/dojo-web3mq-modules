@@ -23,7 +23,7 @@ fn test_group(){
     let group_systems_dispatcher = IGroupDispatcher {
         contract_address: group_systems
     };
-    let group_id = group_systems_dispatcher.create_group(world, 0, 1.try_into().unwrap());
+    let group_id = group_systems_dispatcher.create_group(world, 0, 1.try_into().unwrap(), 0);
     group_id.print();
 
     group_systems_dispatcher.invite(world, group_id, 1.try_into().unwrap(), 2.try_into().unwrap());

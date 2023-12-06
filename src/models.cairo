@@ -4,6 +4,7 @@ struct Group{
     #[key]
     group_id: u256,
     creator: ContractAddress,
+	metadata: u128,
     permission: u32
 }
 

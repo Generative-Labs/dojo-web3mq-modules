@@ -7,7 +7,7 @@ mod group_systems{
     use debug::PrintTrait;
     #[external(v0)]
     impl GroupImpl of IGroup<ContractState>{
-        fn create_group(self: @ContractState, world: IWorldDispatcher, permission: u32, creator: ContractAddress) -> u256{
+        fn create_group(self: @ContractState, world: IWorldDispatcher, permission: u32, creator: ContractAddress, metadata: u128) -> u256{
             assert(creator == starknet::get_caller_address(), 'creator is not caller');
             let mut bytes: Bytes = BytesTrait::new(0, array![]);
             bytes.append_felt252('WEB3MQ_GROUP_ID');
@@ -17,7 +17,8 @@ mod group_systems{
             set!(world, Group{
                 group_id: group_id,
                 creator: creator,
-                permission: permission
+                permission: permission,
+                metadata: metadata
             });
 
             set!(world, Member{
@@ -61,6 +62,7 @@ mod group_systems{
             set!(world, Group{
                 group_id: group.group_id,
                 creator: group.creator,
+                metadata: group.metadata,
                 permission: permission
             });
         }
