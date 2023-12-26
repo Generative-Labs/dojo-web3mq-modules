@@ -2,7 +2,7 @@
 
 # Introduction
 
-web3mq-dojo-modules is the modules on [dojo](https://github.com/dojoengine), which implement web3mq features like group and social relationship
+web3mq-dojo-modules is the modules on [dojo](https://github.com/dojoengine), which implement web3mq features like group and social relationship.
 
 # Running and Test
 
@@ -24,6 +24,56 @@ sozo test
 
 # Design
 
+### User module
+
+- model
+
+```rust
+#[derive(Model, Copy, Drop, Serde)]
+struct User{
+    #[key]
+    address: ContractAddress,
+	web3mq_id: u256
+}
+
+#[derive(Model, Copy, Drop, Serde)]
+struct Follow{
+    #[key]
+    sender: ContractAddress,
+	#[key]
+    target: ContractAddress,
+	follow: bool
+}
+
+#[derive(Model, Copy, Drop, Serde)]
+struct Block{
+    #[key]
+    sender: ContractAddress,
+	#[key]
+    target: ContractAddress,
+	block: bool
+}
+
+#[derive(Model, Copy, Drop, Serde)]
+struct Permission{
+    #[key]
+    sender: ContractAddress,
+    permission: u32
+}
+```
+
+- systems
+
+```rust
+#[starknet::interface]
+trait IUser<TContractState>{
+    fn register(self: @TContractState, world: IWorldDispatcher, address: ContractAddress) -> u256;
+    fn block(self: @TContractState, world: IWorldDispatcher, sender: ContractAddress, target: ContractAddress, block: bool);
+    fn follow(self: @TContractState, world: IWorldDispatcher, sender: ContractAddress, target: ContractAddress, follow: bool);
+    fn set_permission(self: @TContractState, world: IWorldDispatcher, address: ContractAddress, permission: u32);
+}
+```
+
 ### Group module
 
 - model
@@ -35,17 +85,17 @@ struct Group{
     #[key]
     group_id: u256,
     creator: ContractAddress,
-	metadata: u128,
+	  metadata: u128,
     permission: u32
 }
 
 #[derive(Model, Copy, Drop, Serde)]
 struct Member{
-	#[key]
-	group_id: u256,
-	#[key]
-	address: ContractAddress,
-	permission: u32
+	  #[key]
+	  group_id: u256,
+	  #[key]
+	  address: ContractAddress,
+	  permission: u32
 }
 ```
 

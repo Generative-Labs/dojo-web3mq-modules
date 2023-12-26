@@ -11,7 +11,7 @@ sierra = false  # Enable Sierra codegen.
 casm = false   # Enable CASM codegen.
 
 [dependencies]
-dojo = { git = "https://github.com/dojoengine/dojo" , tag = "v0.3.0"}
+dojo = { git = "https://github.com/dojoengine/dojo"}
 
 [[target.dojo]]
 
